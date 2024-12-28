@@ -1,0 +1,196 @@
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Changed font */
+}
+
+.App-logo {
+  height: 35vmin; /* Slightly adjusted size */
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 15s linear; /* Adjusted animation duration */
+  }
+}
+
+.App-header {
+  background-color: #1d1f23; /* Changed background color */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin); /* Increased base font size */
+  color: #f5f5f5; /* Softer white */
+}
+
+.App-link {
+  color: #51a7fa; /* Changed link color */
+  text-decoration: underline;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Added spacing between elements */
+  z-index: 999;
+  background-color: #f8f9fa; /* Lighter background color */
+  padding: 0 20px; /* Added padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+nav img {
+  width: 150px; /* Reduced size */
+}
+
+nav ul {
+  display: flex; /* Ensure horizontal layout */
+  list-style: none; /* Removed bullets */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1em; /* Changed to margin for better spacing */
+}
+
+header {
+  padding-top: 120px; /* Adjusted padding */
+  background-color: #3b4b42; /* Altered background color */
+}
+
+header section {
+  width: 85%; /* Adjusted width */
+  margin: 0 auto; /* Center alignment */
+  padding-bottom: 40px; /* Adjusted padding */
+  color: #d9eceb; /* Softer text color */
+}
+
+h2 {
+  color: #facd1b; /* Altered highlight color */
+  font-size: 36pt; /* Reduced size slightly */
+}
+
+h3 {
+  font-size: 18pt; /* Reduced size slightly */
+}
+
+p {
+  font-size: 14pt; /* Adjusted font size */
+  max-width: 70ch; /* Changed max width */
+  line-height: 1.6; /* Adjusted line height */
+}
+
+button {
+  background-color: #facd1b; /* Kept consistent with h2 */
+  color: #333; /* Slightly darker text */
+  padding: 16px 24px; /* Adjusted padding */
+  border: none;
+  border-radius: 10px; /* Adjusted radius */
+  font-size: 14pt;
+  font-weight: bold;
+  cursor: pointer; /* Added cursor for interactivity */
+  transition: background-color 0.3s ease; /* Added hover effect */
+}
+
+button:hover {
+  background-color: #e0b716; /* Subtle hover color */
+}
+
+header img {
+  height: 350px; /* Adjusted image height */
+  border-radius: 10px; /* Adjusted radius */
+}
+
+footer section {
+  display: flex;
+  flex-wrap: wrap; /* Added wrap for responsiveness */
+  justify-content: space-between; /* Adjusted to move content to opposite sides */
+  width: 85%; /* Adjusted width */
+  margin: 0 auto;
+  gap: 24px; /* Increased gap */
+  align-items: center;
+}
+
+footer {
+  padding: 24px;
+  background-color: #f8f9fa; /* Added background color */
+}
+
+footer img {
+  height: 250px; /* Reduced size */
+  object-fit: cover; /* Ensures consistent scaling */
+  align-self: flex-end; /* Moves the logo to the bottom-right */
+}
+
+footer ul {
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+}
+
+form {
+  display: grid;
+  max-width: 600px; /* Widened form */
+  gap: 20px; /* Spacing between fields */
+  margin: 0 auto; /* Center the form */
+  padding: 30px; /* Added padding */
+  border: 1px solid #ccc; /* Optional: Adds a border */
+  border-radius: 10px; /* Optional: Rounds the edges */
+  background-color: #f9f9f9; /* Light background color for contrast */
+}
+
+form label {
+  color: #333; /* Dark text for better visibility */
+  font-weight: bold; /* Highlight the labels */
+  font-size: 16px; /* Slightly larger font for readability */
+  margin-bottom: 5px; /* Adds spacing between label and input */
+  display: block; /* Ensure labels are above their corresponding inputs */
+}
+
+form input, form button, form select {
+  width: 100%; /* Ensures elements span the form width */
+  padding: 12px; /* Adds padding for comfort */
+  font-size: 16px; /* Improves readability */
+  border: 1px solid #ccc; /* Adds a simple border */
+  border-radius: 5px; /* Softens corners */
+}
+
+
+@media (max-width: 700px) {
+  header section, footer section {
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav items */
+    align-items: center;
+  }
+}
+
+@media (min-width: 701px) {
+  footer section {
+    grid-template-columns: repeat(4, 1fr); /* Simplified syntax */
+    display: grid;
+  }
+
+  header section {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 20px; /* Added gap between columns */
+  }
+}
